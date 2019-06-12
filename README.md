@@ -198,10 +198,7 @@ to this -
 
 --test:  
 -- encryption_key: facdd3a131ddd8988b14f6e4e01039c93cfa0160
-
-Problem Not resolved - Whatever i'm putting there, getting the same error
-
-    h. sudo chown -R canvasuser public/dist/brandable_css
+...
 
 ### Expected behavior:
 
