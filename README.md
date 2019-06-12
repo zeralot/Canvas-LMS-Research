@@ -8,7 +8,7 @@ Date - 08/06/2019
 Install on my local computer.  
 Following "[https://github.com/instructure/canvas-lms/wiki/Production-Start](https://github.com/instructure/canvas-lms/wiki/Production-Start)" this link
 
-# Step One - Database installation and configuration
+### Step One - Database installation and configuration
 
 1.  Installing Postgres  
     a. sudo apt-get install postgresql-9.3  
@@ -24,7 +24,7 @@ Following "[https://github.com/instructure/canvas-lms/wiki/Production-Start](htt
     --no-superuser --no-createrole --pwprompt (i set password 'portal')  
     b. sudo -u postgres createdb canvas_production --owner=canvas
 
-# Step Two - Getting the code
+### Step Two - Getting the code
 
 1.  Using Git
 
@@ -41,7 +41,7 @@ Following "[https://github.com/instructure/canvas-lms/wiki/Production-Start](htt
     d. sudo cp -av . /var/canvas
     e. cd /var/canvas
 
-# Step Three - Dependency Installation
+### Step Three - Dependency Installation
 
 1.  External dependencies
 
@@ -59,7 +59,7 @@ Following "[https://github.com/instructure/canvas-lms/wiki/Production-Start](htt
     g. sudo -u postgres createuser ultron
     h. sudo -u postgres psql -c "alter user ultron with superuser" postgres
 
-# Step Four - Ruby Gems
+### Step Four - Ruby Gems
 
 1.  Bundler and Canvas dependencies
 
@@ -76,7 +76,7 @@ Following "[https://github.com/instructure/canvas-lms/wiki/Production-Start](htt
 
     e. yarn install  
 
-# Step Five - Canvas default configuration
+### Step Five - Canvas default configuration
 
     a. for config in amazon_s3 database \
        delayed_jobs domain file_store outgoing_mail security external_migration; \
@@ -157,7 +157,7 @@ to this
     a. cp config/security.yml.example config/security.yml  
     b. nano config/security.yml
 
-# Step Six - Generate Assets
+### Step Six - Generate Assets
 
     a. cd /var/canvas
     b. mkdir -p log tmp/pids public/assets app/stylesheets/brandable_css_brands
